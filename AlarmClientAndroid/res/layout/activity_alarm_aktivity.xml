@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <CheckBox
+        android:id="@+id/delayCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="17dp"
+        android:text="Verzögerung" />
+
+    <EditText
+        android:id="@+id/delayField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/delayCheck"
+        android:layout_below="@+id/delayCheck"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/fireAlarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/delayField"
+        android:layout_below="@+id/delayField"
+        android:layout_marginTop="56dp"
+        android:text="Alarm Auslösen" />
+
+    <TextView
+        android:id="@+id/minuteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fireAlarmButton"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/delayField"
+        android:text="Min"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/serverLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fireAlarmButton"
+        android:layout_below="@+id/delayField"
+        android:layout_marginTop="26dp"
+        android:text="Server"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/ServerField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/serverLabel"
+        android:layout_alignBottom="@+id/serverLabel"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/serverLabel"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

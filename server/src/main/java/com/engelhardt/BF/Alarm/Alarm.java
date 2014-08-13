@@ -13,7 +13,7 @@ public class Alarm {
 	public void fireAlarm()
 	{
 		try {
-			AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File("D:/workspace/Alarm BF-Tag/AlarmServer/res/Alarm.wav").getAbsoluteFile());
+			AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File("Alarm.wav").getAbsoluteFile());
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioStream);
 			clip.start();

@@ -13,7 +13,9 @@ public class Alarm {
 	public void fireAlarm()
 	{
 		try {
-			AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File("Alarm.wav").getAbsoluteFile());
+//			InputStream alarmStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("Alarm.wav");
+			File fis = new File("D:/Alarm.wav");
+			AudioInputStream audioStream = AudioSystem.getAudioInputStream(fis);
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioStream);
 			clip.start();

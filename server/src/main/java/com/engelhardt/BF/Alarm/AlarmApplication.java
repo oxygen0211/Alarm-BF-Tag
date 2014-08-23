@@ -9,7 +9,7 @@ public class AlarmApplication extends Application {
 	private Set<Object> singletons = new HashSet<Object>();
 	private Set<Class<?>> empty = new HashSet<Class<?>>();
 	public AlarmApplication(){
-	     singletons.add(new AlarmServcie());
+		singletons.add(new AlarmServcie());
 	}
 	@Override
 	public Set<Class<?>> getClasses() {

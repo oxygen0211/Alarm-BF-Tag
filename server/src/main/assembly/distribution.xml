@@ -10,7 +10,7 @@
     <dependencySets>
         <dependencySet>
             <outputFileNameMapping>${artifact.groupId}.${artifact.artifactId}-${artifact.version}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>
-            <outputDirectory>/plugins</outputDirectory>
+            <outputDirectory>/</outputDirectory>
             <useTransitiveDependencies>false</useTransitiveDependencies>
             <useProjectArtifact>false</useProjectArtifact>
             <excludes>
@@ -35,7 +35,7 @@
     <files>
     	<file>
     		<source>target/${artifact.artifactId}-${artifact.version}.jar</source>
-    		<outputDirectory>plugins</outputDirectory>
+    		<outputDirectory>/</outputDirectory>
     	</file>
     </files>
  

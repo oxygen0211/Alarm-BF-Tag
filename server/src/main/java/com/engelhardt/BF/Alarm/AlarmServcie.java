@@ -10,7 +10,7 @@ public class AlarmServcie {
 
 	@GET()
 	@Produces("text/plain")
-	public String triggerAlarm(@PathParam("delay") int delay, @PathParam("group") String group) {
+	public String triggerAlarm(@PathParam("delay") int delay) {
 		try {
 			AlarmManager.getInstance().addAlarm(delay);
 			return "ok";

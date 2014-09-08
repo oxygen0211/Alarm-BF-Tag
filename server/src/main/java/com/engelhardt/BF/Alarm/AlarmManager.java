@@ -2,8 +2,6 @@ package com.engelhardt.BF.Alarm;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -39,7 +37,7 @@ public class AlarmManager {
 	public void addAlarm(int delay) throws DuplicateAlarmException
 	{
 		long scheduleTime = System.currentTimeMillis();
-		long alarmTime = scheduleTime+delay*60*100;
+		long alarmTime = scheduleTime+delay*60*1000;
 		
 		if(alarms.contains(alarmTime))
 		{

@@ -5,14 +5,14 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-@Path("{delay}")
+@Path("{delay}/{group}")
 public class AlarmServcie {
 
 	@GET()
 	@Produces("text/plain")
-	public String triggerAlarm(@PathParam("delay") int delay) {
+	public String triggerAlarm(@PathParam("delay") int delay, @PathParam("group") String group) {
 		try {
-			AlarmManager.getInstance().addAlarm(delay);
+			AlarmManager.getInstance().addAlarm(delay, group);
 			return "ok";
 		} catch (DuplicateAlarmException e) {
 			return "duplicate alarm";

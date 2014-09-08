@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Alarm alarm = new Alarm();
-		alarm.fireAlarm();
+		alarm.fireAlarm("all");
 	}
 
 }
